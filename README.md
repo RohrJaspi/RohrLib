@@ -1,6 +1,6 @@
 # RohrLib
 
-RohrLib is a lightweight utility library for Bukkit / Paper plugins. It bundles commonly needed systems into one reusable library so you don’t have to rewrite the same boilerplate for every plugin.
+RohrLib is a lightweight utility library for Paper plugins. It bundles commonly needed systems into one reusable library so you don’t have to rewrite the same boilerplate for every plugin.
 
 The library is designed to be:
 
