@@ -1,6 +1,6 @@
-package dev.rohrjaspi.rohrLib.gui;
+package dev.rohrjaspi.rohrlib.gui;
 
-import dev.rohrjaspi.rohrLib.RohrLib;
+import dev.rohrjaspi.rohrlib.RohrLib;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;

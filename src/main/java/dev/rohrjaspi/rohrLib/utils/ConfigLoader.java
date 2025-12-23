@@ -1,4 +1,4 @@
-package dev.rohrjaspi.rohrLib.utils;
+package dev.rohrjaspi.rohrlib.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;

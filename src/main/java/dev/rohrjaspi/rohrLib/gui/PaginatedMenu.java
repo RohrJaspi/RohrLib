@@ -1,8 +1,7 @@
-package dev.rohrjaspi.rohrLib.gui;
+package dev.rohrjaspi.rohrlib.gui;
 
-import dev.rohrjaspi.rohrLib.utils.ItemCreator;
+import dev.rohrjaspi.rohrlib.utils.ItemCreator;
 import net.kyori.adventure.text.minimessage.MiniMessage;
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;

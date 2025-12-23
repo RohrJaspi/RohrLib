@@ -1,6 +1,6 @@
-package dev.rohrjaspi.rohrLib;
+package dev.rohrjaspi.rohrlib;
 
-import dev.rohrjaspi.rohrLib.gui.PlayerMenuUtility;
+import dev.rohrjaspi.rohrlib.gui.PlayerMenuUtility;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import lombok.Getter;

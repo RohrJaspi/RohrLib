@@ -1,4 +1,4 @@
-package dev.rohrjaspi.rohrLib.gui;
+package dev.rohrjaspi.rohrlib.gui;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;

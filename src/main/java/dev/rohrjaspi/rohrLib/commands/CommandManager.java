@@ -1,4 +1,4 @@
-package dev.rohrjaspi.rohrLib.commands;
+package dev.rohrjaspi.rohrlib.commands;
 
 import io.papermc.paper.plugin.lifecycle.event.LifecycleEventManager;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;

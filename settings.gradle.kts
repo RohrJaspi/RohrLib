@@ -1,1 +1,1 @@
-rootProject.name = "RohrLib"
+rootProject.name = "rohrlib"

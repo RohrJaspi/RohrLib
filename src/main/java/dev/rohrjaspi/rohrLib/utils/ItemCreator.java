@@ -1,4 +1,4 @@
-package dev.rohrjaspi.rohrLib.utils;
+package dev.rohrjaspi.rohrlib.utils;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;

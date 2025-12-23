@@ -1,4 +1,4 @@
-package dev.rohrjaspi.rohrLib.commands;
+package dev.rohrjaspi.rohrlib.commands;
 
 import com.mojang.brigadier.tree.LiteralCommandNode;
 import io.papermc.paper.command.brigadier.CommandSourceStack;

@@ -1,7 +1,7 @@
-package dev.rohrjaspi.rohrLib.gui;
+package dev.rohrjaspi.rohrlib.gui;
 
-import dev.rohrjaspi.rohrLib.RohrLib;
-import dev.rohrjaspi.rohrLib.utils.ItemCreator;
+import dev.rohrjaspi.rohrlib.RohrLib;
+import dev.rohrjaspi.rohrlib.utils.ItemCreator;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.Bukkit;
