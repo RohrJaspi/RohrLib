@@ -1,13 +1,10 @@
-import xyz.jpenilla.runtask.task.AbstractRun
-
 plugins {
     java
-    id("com.gradleup.shadow") version "8.3.0"
-    id("xyz.jpenilla.run-paper") version "2.3.1"
+    id("maven-publish")
 }
 
 group = "dev.rohrjaspi"
-version = "1.0"
+version = System.getenv("VERSION") as String? ?: "v1.0.0"
 
 repositories {
     mavenCentral()
@@ -15,10 +12,11 @@ repositories {
         name = "papermc-repo"
     }
     maven {
-        url = uri("https://maven.pkg.github.com/SkyEpoke/core-library")
+        name = "GitHubPackages"
+        url = uri("https://maven.pkg.github.com/RohrJaspi/RohrLib")
         credentials {
-            var username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
-            var password = project.findProperty("gpr.token") ?: System.getenv("TOKEN")
+            username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+            password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
         }
     }
 }
@@ -31,22 +29,27 @@ dependencies {
     implementation("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
 
-    implementation("dev.rohrjaspi:main-library:1.10")
 }
 
-tasks {
-    runServer {
-        minecraftVersion("1.21.8")
-        systemProperty("com.mojang.eula.agree", "true")
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/RohrJaspi/RohrLib")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
     }
-}
-
-tasks.withType(xyz.jpenilla.runtask.task.AbstractRun::class) {
-    javaLauncher = javaToolchains.launcherFor {
-        vendor = JvmVendorSpec.JETBRAINS
-        languageVersion = JavaLanguageVersion.of(21)
+    publications {
+        create<MavenPublication>("gpr") {
+            from(components["java"])
+            groupId = project.group.toString()
+            artifactId = project.name
+            version = project.version.toString()
+        }
     }
-    jvmArgs("-XX:+AllowEnhancedClassRedefinition")
 }
 
 val targetJavaVersion = 21
@@ -59,17 +62,8 @@ java {
     }
 }
 
-tasks.build {
-    dependsOn("shadowJar")
-}
-
-
-
 tasks.processResources {
     val props = mapOf("version" to version)
     inputs.properties(props)
     filteringCharset = "UTF-8"
-    filesMatching("paper-plugin.yml") {
-        expand(props)
-    }
 }
