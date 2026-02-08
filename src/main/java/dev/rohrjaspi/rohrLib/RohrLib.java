@@ -20,7 +20,6 @@ public final class RohrLib extends JavaPlugin {
     @Override
     public void onLoad() {
         instance = this;
-
     }
 
     public static PlayerMenuUtility getPlayerMenuUtility(Player p) {
