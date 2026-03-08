@@ -87,7 +87,7 @@ public final class FileLoader {
 
     private void mergeMissingKeys(FileConfiguration user, FileConfiguration def) {
         for (String key : def.getKeys(true)) {
-            if (!user.contains(key)) {
+            if (!user.contains(key, true)) {
                 user.set(key, def.get(key));
             }
         }
