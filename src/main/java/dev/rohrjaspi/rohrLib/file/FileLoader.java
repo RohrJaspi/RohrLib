@@ -130,7 +130,7 @@ public final class FileLoader {
         }
     }
 
-    private void save() {
+    public void save() {
         try {
             user.save(configFile);
         } catch (IOException e) {
