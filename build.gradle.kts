@@ -29,6 +29,8 @@ dependencies {
     implementation("org.projectlombok:lombok:1.18.42")
     annotationProcessor("org.projectlombok:lombok:1.18.42")
 
+    implementation("com.zaxxer:HikariCP:7.0.2")
+
 }
 
 publishing {
